@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title></title>	
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="jquery-3.4.1.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<main>
+		<!--Центр страницы -->
+		<div id="container">
+			<section>
+			<div id="task-list">
+				<h3>Cписок дел:</h3>	
+				<div id="tasks-list"></div>		
+			</div> <!-- task-list Конец -->
+			</section>
+			<section>
+			<div id="task-add">
+				<h3>Добавить новое дело:</h3>
+				<div id="add-task">
+					<form>
+						<p><label for="name-field">* Название</label>
+						<input type="text" size="40" required="required" name="name-field" id="name-field"> 
+						<p><label for="descr-field">* Описание</label>
+						<textarea rows="10" cols="40" required="required" maxlength="1000" name="descr-field" id="descr-field"></textarea> 
+						<p><button type="button" id="add-button">Добавить дело</button> 
+					</form><p>
+				</div> <!--add-task Конец -->
+			</div> <!-- task-add Конец -->
+			</section>
+		</div>
+	</main>
+</body>
+</html>
