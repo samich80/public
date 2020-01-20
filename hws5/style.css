@@ -1,0 +1,537 @@
+/*установим параметры для body. Ширину возьмем 1000, как в макете*/
+/*Чтобы ничего не налазило на края. поставим маржины*/
+html, body{
+	margin: 5px;
+	padding: 0;
+	/*min-width: 1000px;*/
+	font-family: Arial;
+	background-color: #F9F9F9;
+}
+
+/*Изменяем поведение и вид ссылок глобально во всем документе*/
+/*они у нас почти все одинаковые, локально быдем менять только цвет ссылки*/
+/*Вид ссылки: непосещенная, посещенная*/
+a{
+	color: #000000;
+	text-decoration: none;
+}
+/*Вид ссылки: при наведении мыши*/
+	a:hover{
+		color: #000000;
+		text-decoration: underline;
+	}
+
+/*Контейнер с фиксированой шириной*/
+.fixed-container{
+	max-width: 1000px;
+	min-width: 320px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/*Верхний блок, на всю ширину страницы, цвет у него все-таки не черный :-) */
+#block-top{
+	background-color: #00122F;
+	color: white;
+	height: 56px;
+}
+	/*блок с текстом "свежие новости..." */
+	/*сделал текст блоком, так удобнее, мне кажется*/
+	#block-top-txt{
+		position: absolute;
+		line-height: 56px;
+		font-size: 16px;
+	}
+		/*параметры ссылки в этом тексте*/
+		/*зададим "локальным наймспейсом"*/
+		#block-top-txt a{
+			color: white;
+		}
+	/*блок с датой и временем */
+	#block-date-time{
+		float: right;
+		line-height: 56px;
+		font-size: 16px;
+	}
+
+/*второй блок с лого. Весь блок*/
+#block-logo{
+	height: 80px;
+	background-color: #FFFFFF;
+	padding-top: 40px;
+}
+	/*лого с земным шаром и тектом.*/
+	/*я вытащил картинку из psd, она там в слоях есть*/
+	/*и текст написал рядом, как в макете*/
+	.block-logo-img{
+		position: relative;
+		float: left;
+		height: 50px;
+		max-width: 122px;
+		padding-left: 48px;
+		margin-bottom: 5px;
+		background-image: url(img/internet.png);
+		background-repeat: no-repeat;
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+	/*Список с городами(наверное), Москва выбрана*/
+	/*в списке не понял, как сделать цвет текста сисним а стрелку черной*/
+	#block-logo-list{
+		position: relative;
+		float: left;
+		max-width: 350px;
+		height: 41px;
+		padding-left: 20px;
+		margin-top: 10px;
+	}
+		/*чтобы был подчеркнут только текст, а не весь список*/
+		/*задаю параметры только элементам, содержащим текст*/
+		/*как сделать отступ штриховой линии от текста  - не догадался....*/
+		#block-logo-list select{
+			color: #7babd9;
+			font-size: 16px;
+			border: none;
+			max-width: 80px;
+			text-decoration: underline;
+			text-decoration-style: dashed; 
+		}
+	/*блок с картинкой погоды и температурой*/ 	
+	#block-logo-weather{
+			position: relative;
+			float: left;
+			height: 41px;
+			max-width: 90px;
+			padding-top: 4px;
+			padding-left: 40px;
+			margin-top: 10px;
+			font-size: 16px;
+			color: #AAAAB5;
+			background-image: url(img/cloudy.png);
+			background-repeat: no-repeat;
+	}
+	/*строка поиска по сайту*/
+	#block-logo-search{
+		position: relative;
+		max-width: 320px;
+		height: 45px;
+		float: right;
+	}
+		/*картинка с увеличительным стеклом.*/
+		/*при позиционировании картинки пришлось гуглить :-)*/
+		/*нашел свойство background-position, с ним все получилось :-)*/
+		#block-logo-search input{
+			background-color: #f3f3f3;
+			max-width: 300px;
+			height: 45px;
+			border: none;
+			border-radius: 20px;
+			padding-left: 20px;
+			background-image: url(img/search.png);
+			background-repeat: no-repeat;
+			background-position: right 20px top 15px;
+		}
+
+/*Блок главного меню. Сделал отдельным элементом*/
+#block-menu{
+	height: 50px;
+	font-size: 16px;
+	background-color: #FFFFFF;
+}
+	/*элемент меню, текст, Главная, Политика и т.д.*/
+	.menu-item{
+	float: left;
+	margin-right: 18px;
+	}
+	/*символ "/" в меню*/
+	.menu-divider{
+		float: left;
+		margin-right: 18px;
+		color: grey;
+	}
+
+/*Центральный блок, на всю ширину, с градиентом*/
+/*как сделать градиент - не рахобрался, поэтому вставил картинку*/
+#block-centr{
+	background-color: #F9F9F9;
+	background-image: url(img/background.png);
+	background-repeat: repeat-x;
+	padding-top: 20px;
+}
+	/*задаем выделение места для вложенного контейнера*/
+	/*т.к. у нас есть вложенные контейнеры с float*/
+	/*они считаются "вырванными из потока"*/
+	#block-centr .fixed-container{
+	overflow-y: hidden;
+	}
+	/*Блок новостей слева. Вся колонка слева*/
+	#block-centr-left{
+		position: relative;
+		max-width: 250px;
+		float: left;
+		background-color: #FFFFFF;
+	}
+		/*Переопределение h2 для заголовка колонки слева.*/
+		#block-centr-left h2{
+			padding-top: 10px;
+			padding-bottom: 25px;
+			padding-left: 15px;
+			padding-right: 45px;
+			font-size: 20px;		
+			font-weight: bold;
+			border-bottom: 1px solid #e5e5e5;
+		}
+		/*Переопределение h3 для заголовка т.к. тег article требует .*/
+		#block-centr-left h3{
+			font-size: 14px;
+			margin-top: 0px;
+			margin-bottom: -20px;
+			font-weight: normal;
+		}
+
+		/*Блок новостей слева. Весь блок.*/
+		.block-lnews{
+			margin-top: 25px;
+			margin-bottom: 25px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		/*Блок новостей слева. Текст новости.*/
+		.block-lnews-txt{			
+			white-space:pre-line;
+		}
+			/*Строка с разделом временем датой*/
+			/*условно, назовем её "легенда"*/
+			/*Этот блок будет использован много раз слева*/
+			/*и четыре раза в центре (блок из четырех новостей)*/
+			.lnews-legend{
+				position: relative;
+				padding-top: 15px;
+				font-size: 12px;
+				color: #91919F;
+			}
+				/*переопределим вид ссылок для этого блока, отличается от глобально заданного */
+				/*изменяем вид ссылки для "легенды статьи"*/
+				.lnews-legend a{
+					color: #91919F;
+					float: left;
+				}
+				/*изменяем поведение ссылки при наведении*/
+				.lnews-legend a:hover{
+					color: #91919F;
+				}
+				/*ссылка на раздел новости*/
+				/*ссылка у нас только здесь,*/
+				/*логичнее было бы задать вид гипер-ссылок здесь*/
+				/*ноь других гипер-ссылок больше нет, поэтому можно и для всего блока*/
+				.legend-link{
+					float: left;
+					width: 100px;
+				}
+				/*Время*/
+				.legend-time{
+					float: left;
+					width: 45px;
+					background-image: url(img/clock.png);
+					background-repeat: no-repeat;
+					padding-left: 15px;
+				}
+				/*Коментарии*/
+				.legend-commcount{
+					float: left;
+					width: 15px;
+					background-image: url(img/chat.png);
+					background-repeat: no-repeat;
+					padding-left: 15px;
+				}
+
+			/*Кнопка "Все новости" под новостями*/
+			/*нашел такое решение. понравилось :-)*/
+			#button-all-news{
+				margin-top: 65px;
+	    		display: inline-block;
+				height: 45px;
+	    		width: 175px;
+	    		position: relative;
+	    		border: 1px solid  #448ccb;
+	    		border-radius: 20px;
+	    		margin-left: 30px;
+	    		margin-bottom: 30px;
+	    		line-height: 45px;
+	    		text-align: center;
+	    		font-size: 14px;
+			}
+				/*переопределим вид ссылок для этого блока, отличается от глобально заданного */
+				/*Изменяем вид ссылки внутри кнопки*/
+				a.button-link{
+				color: #448ccb;
+				} 
+				a.button-link:hover{
+				color: #448ccb;
+				text-decoration: none;
+				} 
+				a.button-link:visited{
+				color: #448ccb;
+				text-decoration: none;
+				} 
+/*--------------------------------------------------------------------------------------------------*/
+	/*Блок в центре с новостью про Крым*/
+	#block-centr-centr{
+		max-width: 440px;
+		height: 205px;
+		float: left;
+		margin-left: 10px;
+		margin-right: 10px;
+		position: relative;
+		background-image: url("img/cent-top-news.png");
+		background-repeat: no-repeat;
+		padding: 120px 0 0 0;
+	}
+		/*ссылка на раздел новости*/
+		.top-news-title{
+			position: relative;
+			top: 0px;
+			padding-left: 25px;
+			font-size: 12px;
+			font-weight:lighter; /*не могу понять. почему текст жирный*/
+			color: #FFFFFF;
+			float: left;
+		}
+			/*переопределим вид ссылок для этого блока, отличается от глобально заданного */
+			/*Параметры ссылки "топовой" новости*/
+			.top-news-title a{ 
+				color: #FFFFFF;
+			}
+			/*Параметры ссылки "топовой" новости при наведении мыши*/
+			.top-news-title a:hover{ 
+				color: #FFFFFF;
+			}
+		/*Заголовок новости. Крупный текст.*/
+		.top-news-subj{
+			max-width: 400px;
+			padding-right: 10px;
+			 /*жирным он жолжен быть только тут*/
+		}
+			.top-news-subj h3{
+				font-size: 30px;
+				font-weight: bold;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			/*То, что я назвал "легендой", т.е. дата, время новости*/
+			/*Весь блок*/
+			.top-news-legend{
+				max-width: 370px;
+				padding-top: 0px;
+			}
+				/*надпись с датой новости*/
+				.top-news-date{
+					float: left;
+					width: 90px;
+				}
+				/*надпись со временем новости*/
+				.top-news-time{
+					width: 30px;
+					float: left;
+					background-image: url(img/clock-white.png);
+					background-repeat: no-repeat;
+					background-position: left 0px top 2px;
+					padding-left: 14px;
+					padding-bottom: 30px;
+				}
+		/*Блок посередине, с четырмя новостями с изображениями*/
+		/*Весь блок*/		
+		#block-centr-news{
+			position: relative;
+		}
+			/*определяем парметры картинок в этом блоке*/
+			/*их четыре и они одинаковые*/
+			/*жестко заданы размеры картинки, т.к. картинки в */
+			/*исходнике (psd) разные по размеру, а надо одинаковые*/
+			#block-centr-news img{
+				height: 135px;
+				width: 210px;
+			}
+			/*блок новости слева*/
+			/*так сделал, потому, что две колонки новостей, по две новости*/
+			/*колонки прижаты, левая -  клевому краю*/
+			/*правая - по правому, поэтому сделал 2 класса для новостей справа*/
+			/*и ддля новостей справа. Пробел между ними получается сам*/
+			.block-cnews-left {
+				margin-top: 20px;
+				max-width: 210px;
+				float: left;
+				height: 240px;
+			}
+			/*Блок для новостей по правому краю*/
+			.block-cnews-right{
+				margin: 20px 0 0 0;
+				max-width: 210px;
+				float: right;
+				height: 240px;
+			}
+			/*Блок с текстом для новостей в блоке по-четыре*/
+			.block-cnews-text{
+				margin-top: 0px;				
+				height: 50px;
+			}
+				.block-cnews-text h3{
+					font-size: 14px;
+					font-weight: bold;
+				}	
+	/*Блок справа, с рекламой*/
+	#block-centr-right{
+		width: 200px;
+		float: left;
+		position: relative;
+	}
+		/*определяем параметры картинок для правого блока*/
+		/*делаем это здесь, чтобы параметры не распространялись на всю*/
+		/*сьраницу, а только на правый блок*/
+		#block-centr-right img{
+			margin-bottom: 20px;
+		}
+/*Нижний блок посредине. Верхний отступ между блоками уже задан в #block-centr-right img*/
+#block-bottom{
+	float: left;
+}
+	/*блок внизу-слева*/
+	#bottom-left{
+		position: relative;
+		max-width: 590px;
+		height: 400px;
+		float: left;
+		background-image: url("img/bottom-news.png");
+		background-repeat: no-repeat;
+		padding: 120px 0 0 0;
+	}
+
+		/*краткое содержание новости*/
+		#bottom-news-bref{
+			position: relative;
+			float: left;
+			margin-top: 25px;
+			font-weight: lighter;
+			padding-right: 80px;
+		}
+	/*Правый нижний блок новостей. Весь блок.*/	
+	#bottom-right{
+		position: relative;
+		float: left;
+		width: 390px;
+		height: 400px;
+		padding-left: 20px;
+		padding-top: 10px;
+		background-color: #FFFFFF;
+	}
+		/*Переопределение вида h2 для нижнего правого блока. под макет*/	
+		#bottom-right h2{
+			font-size: 20px;
+			padding-bottom: 25px;
+			border-bottom: 1px solid #ebebeb;
+		}
+	/*Заголовки новостей снизу справа. Весь блок.*/	
+	#bottom-news{
+		overflow-y: hidden;
+	}
+		.bottom-news-item{
+			position: relative;
+			padding-right: 30px;
+			padding-top: 0px;			
+			padding-bottom: 20px;	
+		}
+		.bottom-news-item h3{
+			font-size: 15px;
+			font-weight: bold;
+			margin-bottom: 0px;
+		}
+/*Подвал. Footer. Весь блок.*/
+#block-footer{
+	position: relative;
+	float: left;
+	margin-top: 25px;
+	height: 312px;
+	width: 100%;
+	background-color: #00122f;
+	color: #FFFFFF;	
+}
+	#block-footer address{
+		font-size: 16px;
+		font-weight: lighter;
+		font-style: normal;
+	}
+	/*Меняем вид ссылок для этого блока*/
+	#block-footer a{
+		color: #FFFFFF;
+	}
+	#block-footer .fixed-container{
+		padding-top: 55px;
+	}
+	/*Блок меню слева*/
+	#footer-menu-left{
+		float: left;
+		max-width: 250px;
+	}
+		/*Элемент меню внизу слева*/
+		.footer-menu-item{
+			float: left;
+			width: 125px;
+			margin-bottom: 10px;
+		}
+	/*Стлобец с логотипом внизу*/
+	#footer-about{
+		position: relative;
+		float: left;
+		margin-left: 180px;
+	}
+		/*Элемент колонки посередине слева*/
+		.footer-about-item{
+			position: relative;
+			margin-top: 10px;
+		}
+	/*Стлобец справа внизу*/
+	#footer-right{
+		float: right;		
+	}
+		/*Строка с логотипами социальных сетей*/
+		#footer-social-line{
+			height: 50px;
+			max-width: 235px;
+		}
+			#footer-social-line img{
+				margin-left: 15px;
+				vertical-align: left;
+				/*border: 1px solid white;*/ /*для отладки*/
+			}
+		/*Строка с контактами*/	
+		#footer-contacts{
+			padding-top: 25px;
+		}
+			/*Телефон*/	
+			#footer-tel{
+				background-image: url(img/call-answer.png);
+				background-repeat: no-repeat;
+				padding-left: 30px;
+				margin-left: 18px;
+			}
+			/*email*/
+			#footer-email{
+				background-image: url(img/envelope.png);
+				background-repeat: no-repeat;
+				background-position: left 0px top 4px;
+				padding-left: 30px;
+				margin-left: 18px;
+				margin-top: 15px;
+			}
+	/*Нижняя строка*/
+	#bottom-line{
+		float: left;
+		position: relative;
+		text-align: center;
+		margin-top: 50px;
+		padding-top: 20px;
+		border-top: 1px solid #26354e;
+		color: #7a7f88;
+		max-width: 100%;
+	}

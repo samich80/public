@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Новостное агенство</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!--Верхний блок (ссылка, время)-->
+	<div id="block-top">
+		<div class="fixed-container">
+			<!--Верхний блок приветствие-->
+			<div id="block-top-txt">Самые <a href="#">свежие новости</a> в реальном времени</div>
+			<!--Верхний блок дата время-->
+			<div id="block-date-time"><time datetime="2019-12-17 12:33">12:33 17.12.2019</time></div>
+		</div>
+	</div>
+	<!--block-top Конец-->
+	<!--Блок лого (лого, выбор города, поиск)-->
+	<div id="block-logo">
+		<div class="fixed-container">
+			<!--Картинка с лого-->
+			<div class="block-logo-img">Новостное агентство</div>
+	<!--Выпадающий список -->
+			<div id="block-logo-list">
+			<form action="https://echo.htmlacademy.ru/" method="post">
+				 <select id="selectlist">
+					<option>Москва</option>
+					<option>Еще город</option>
+					<option>Другой город</option>
+				 </select>
+			</form>
+			</div>
+	<!--Погода -->
+			<div id="block-logo-weather">+22&deg;C</div>
+	<!--Поиск по сайту -->
+			<div id="block-logo-search">
+				<form action="https://echo.htmlacademy.ru/" method="post">
+					<input type="text" name="search" placeholder="Поиск по сайту" id="searchbox">
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--block-logo Конец-->
+	<!--Меню -->
+	<nav>
+		<div id="block-menu">
+			<div class="fixed-container">		
+				<div class="menu-item"><a href="#">Главная</a></div>
+					<div class="menu-divider">/</div>
+				<div class="menu-item"><a href="#">Политика</a></div>
+					<div class="menu-divider">/</div>
+				<div class="menu-item"><a href="#">Общество</a></div>
+					<div class="menu-divider">/</div>
+				<div class="menu-item"><a href="#">Экономика</a></div>
+					<div class="menu-divider">/</div>
+				<div class="menu-item"><a href="#">В мире</a></div>
+					<div class="menu-divider">/</div>
+				<div class="menu-item"><a href="#">Проишествия</a></div>
+					<div class="menu-divider">/</div>
+				<div class="menu-item"><a href="#">Спорт</a></div>
+					<div class="menu-divider">/</div>
+				<div class="menu-item"><a href="#">Наука</a></div>
+					<div class="menu-divider">/</div>
+				<div class="menu-item"><a href="#">Туризм</a></div>
+			</div>			
+		</div>	
+	</nav>	
+	<!--Меню Конец -->
+
+	<!--Центральная часть-->
+	<div id="block-centr">
+		<div class="fixed-container">
+<!--                 Центральная часть Левая колонка   --> 
+		<section>                                            
+			<div id="block-centr-left">
+				<h2>Новости дня</h2>
+				<!--Новостной блок. Начало.-->
+				<article>
+				<div class="block-lnews"><!--block-lnews 1 Начало-->
+					<div class="block-lnews-txt">
+						<h3><a href="#">Кот Ахил предсказал победу российской сборной над Египтом на ЧМ-2018</a></h3>
+					</div>
+					<!--  Легенда новости -->
+						<div class="lnews-legend">
+						<!--Ссылка на раздел-->
+							<div class="legend-link">
+								<a href="#">/ ЧМ по футболу</a>
+							</div>
+							<div class="legend-time">
+								<time>10:48</time>
+							</div>
+							<div class="legend-commcount">
+								15
+							</div>
+						</div>
+					<!--  Легенда новости Конец -->				
+				</div><!--block-lnews 1 Конец-->
+				</article>
+				<article>
+				<div class="block-lnews"><!--block-lnews 2 Начало-->
+					<div class="block-lnews-txt">
+						<h3><a href="#">«Нафтогаз»: суд разрешил заморозить активы «Газпрома» в Великобритании</a></h3>
+					</div>
+					<!--  Легенда новости -->
+						<div class="lnews-legend">
+						<!--Ссылка на раздел-->
+							<div class="legend-link">
+								<a href="#">/ Политика</a>
+							</div>
+							<div class="legend-time">
+								<time>10:48</time>
+							</div>
+							<div class="legend-commcount">
+								15
+							</div>
+						</div>
+					<!--  Легенда новости Конец -->
+				</div><!--block-lnews 2 Конец-->
+				</article>
+				<article>
+				<div class="block-lnews"><!--block-lnews 3 Начало-->
+					<div class="block-lnews-txt">
+						<h3><a href="#">Минтранс предписал оборудовать общественный транспорт кондиционерами</a></h3>
+					</div>
+					<!--  Легенда новости -->
+						<div class="lnews-legend">
+							<!--Ссылка на раздел-->
+							<div class="legend-link">
+								<a href="#">/ Транспорт</a>
+							</div>
+							<div class="legend-time">
+								<time>10:48</time>
+							</div>
+							<div class="legend-commcount">
+								15
+							</div>
+						</div>
+					<!--  Легенда новости Конец -->
+				</div><!--block-lnews 3 Конец-->
+				</article>
+				<article>
+				<div class="block-lnews"><!--block-lnews 4 Начало-->
+					<div class="block-lnews-txt">
+						<h3><a href="#">Летние кафе Москвы временно закроются из-за непогоды</a></h3>
+					</div>
+					<!--  Легенда новости -->
+						<div class="lnews-legend">
+						<!--Ссылка на раздел-->
+							<div class="legend-link">
+								<a href="#">/ Погода</a>
+							</div>
+							<div class="legend-time">
+								<time>10:48</time>
+							</div>
+							<div class="legend-commcount">
+								15
+							</div>
+						</div>
+					<!--  Легенда новости Конец -->
+				</div><!--block-lnews 4 Конец-->
+				</article>
+				<article>
+				<div class="block-lnews"><!--block-lnews 5 Начало-->
+					<div class="block-lnews-txt">
+						<h3><a href="#">Комплексное благоустройство Щелковского шоссе завершится в июне</a></h3>
+					</div>
+					<!--  Легенда новости -->
+						<div class="lnews-legend">
+						<!--Ссылка на раздел-->
+							<div class="legend-link">
+								<a href="#">/ Транспорт</a>
+							</div>
+							<div class="legend-time">
+								<time>10:48</time>
+							</div>
+							<div class="legend-commcount">
+								15
+							</div>
+						</div>
+					<!--  Легенда новости Конец -->
+				</div><!--block-lnews 5 Конец-->
+				</article>
+				<article>
+				<div class="block-lnews"><!--block-lnews 6 Начало-->
+					<div class="block-lnews-txt">
+						<h3><a href="#">В Москве назвали самое популярное мороженое у болельщиков ЧМ-2018</a></h3>
+					</div>
+					<!--  Легенда новости -->
+						<div class="lnews-legend">
+						<!--Ссылка на раздел-->
+							<div class="legend-link">
+								<a href="#">/ ЧМ по футболу</a>
+							</div>
+							<div class="legend-time">
+								<time>10:48</time>
+							</div>
+							<div class="legend-commcount">
+								15
+							</div>
+						</div>
+					<!--  Легенда новости Конец -->
+				</div><!--block-lnews 6 Конец-->
+				</article>	
+			<!--Новостной блок. Конец.-->
+			<!--Кнопка "Все новости". Начало. -->
+				<a href="#" class="button-link"><div id="button-all-news">Все новости</div></a>
+			<!--Кнопка "Все новости". Конец. -->	
+			</div><!--blockcentr-left Конец-->
+		</section>
+<!--                 Центральная часть Левая колонка Конец       -->
+
+<!--                 Центральная часть Центральная колонка       -->
+		<section>
+				<div id="block-centr-centr">
+					<!--Новость посередине страницы -->
+					<article>
+					<div id="centr-top-news">
+												
+						 <div class="top-news-title">
+						 	<div id="top-news-link">
+						 		<a href="#">/ Политика</a>
+						 	</div>
+						 	<div class="top-news-subj">
+						 		<h3><a href="#">В Крыму отреагировали на слова Кравчука о возврате полуострова</a></h3>
+						 	</div>
+						 <!--  Легенда новости -->
+						 	<div class="top-news-legend">
+						 		<div class="top-news-date">
+						 			<time datetime="2018-06-18">18 Июня 2018</time>
+						 		</div>
+						 		<div class="top-news-time">
+						 			<time>10:48</time>
+						 		</div>
+						 	</div>
+						 <!--  Легенда новости Конец -->	
+						 </div>
+					</div><!--centr-top-new Конец-->
+					</article>	
+				 	<!--Новость посередине страницы Конец -->
+				 	<!--Блок с четырмя новостями посередине Начало-->
+				 	<div id="block-centr-news">
+				 		<article>
+				 		<div class="block-cnews-left"><!--block-cnews-left 1-->
+							<img src="img/cnews-1.png" alt="news-1">
+								<div class="block-cnews-text">
+									<h3><a href="#">Алексей Навальный объявил акцию против пенсионной реформы 1 июля</a></h3>
+								</div>		
+							<!--  Легенда новости -->
+								<div class="lnews-legend">
+								<!--Ссылка на раздел-->
+									<div class="legend-link">
+										<a href="#">/ Политика</a>
+									</div>
+									<div class="legend-time">
+										<time>10:48</time>
+									</div>
+									<div class="legend-commcount">
+										15
+									</div>
+								</div>
+							<!--  Легенда новости Конец -->	
+						</div><!--block-cnews-left 1 Конец-->
+						</article>	
+						<article>				
+						<div class="block-cnews-right"><!--block-cnews-right 2-->
+							<img src="img/cnews-2.png" alt="news-2">
+								<div class="block-cnews-text">
+									<h3><a href="#">Дума увеличила пошлины за выдачу загранпаспортов и водительских прав</a></h3>	
+								</div>		
+							<!--  Легенда новости -->
+								<div class="lnews-legend">
+								<!--Ссылка на раздел-->
+									<div class="legend-link">
+										<a href="#">/ Общество</a>
+								</div>
+								<div class="legend-time">
+									<time>10:48</time>
+								</div>
+								<div class="legend-commcount">
+									15
+								</div>
+							</div>
+							<!--  Легенда новости Конец -->		
+						</div><!--block-cnews-right 2 Конец-->
+						</article>
+						<article>
+						<div class="block-cnews-left"><!--block-cnews-left 3-->
+							<img src="img/cnews-3.png" alt="news-3">
+								<div class="block-cnews-text">
+									<h3><a href="#">В России заработал стриминговый сервис YouTube</a></h3>	
+								</div>	
+							<!--  Легенда новости -->
+							<div class="lnews-legend">
+								<!--Ссылка на раздел-->
+								<div class="legend-link">
+										<a href="#">/ Интернет</a>
+								</div>
+								<div class="legend-time">
+									<time>10:48</time>
+								</div>
+								<div class="legend-commcount">
+									15
+								</div>
+							</div>
+							<!--  Легенда новости Конец -->		
+						</div><!--block-cnews-left 3 Конец-->
+						</article>
+						<article>
+						<div class="block-cnews-right"><!--block-cnews-right 4-->
+							<img src="img/cnews-4.png" alt="news-4">
+								<div class="block-cnews-text">
+									<h3><a href="#">Кейн признан лучшим игроком матча ЧМ-2018 Тунис — Англия</a></h3>
+							</div>		
+							<!--  Легенда новости -->
+							<div class="lnews-legend">
+								<!--Ссылка на раздел-->
+								<div class="legend-link">
+									<a href="#">/ Политика</a>
+								</div>
+								<div class="legend-time">
+									<time>10:48</time>
+								</div>
+								<div class="legend-commcount">
+									15
+								</div>
+							</div>
+							<!--  Легенда новости Конец -->		
+						</div><!--block-cnews-right 4 Конец-->
+						</article>	
+				 	</div><!--block-centr-news Конец-->	
+				 	<!--Блок с четырмя новостями посередине Конец-->		 	
+				</div><!--block-centr-centr. Конец-->
+		</section>	
+<!--                 Центральная часть Центральная колонка Конец -->
+
+<!--                 Центральная часть Правая колонка            -->
+		<!--Сомнения гложат, баннеры- это же ссылка на сайт рекламодателя, но вставлять не буду пока... -->	
+			<aside>
+				<div id="block-centr-right">
+					<img src="img/banner-1.png" alt="banner1">
+					<img src="img/banner-2.png" alt="banner2">
+				</div><!--block-centr-right Конец-->
+			</aside>
+	<!--                 Центральная часть Правая колонка Конец      -->
+
+	<!--                 Центральная часть Нижняя колонка            -->
+			<section>
+				<div id="block-bottom">
+						<div id="bottom-left"><!--Новость с картинкой слева -->
+							<article>
+							<!--  Легенда новости  -->
+								<div class="top-news-title">
+									<div class="top-news-link">
+										<a href="#">/ Политика</a>
+									</div>
+									<div class="top-news-subj">
+										<h3><a href="#">Пекин обвинил Вашингтон в развязывании торговой войны</a></h3>
+									</div>
+									<div id="top-news-legend">
+										<div class="top-news-date">
+									 		<time datetime="2018-06-18">18 Июня 2018</time>
+									 	</div>
+									 	<div class="top-news-time">
+									 		<time>10:48</time>
+									 	</div>
+									 </div>
+									<!--Краткое описание новости. начало-->
+									<div id="bottom-news-bref">
+										Министерство коммерции Китая заявило, что Пекин примет «качественные» и количественные» меры, если президент США Дональд Трамп введет дополнительные пошлины на китайские товары
+									</div>
+									<!--Краткое описание новости. конец-->
+								</div>
+							</article>
+							<!--  Легенда новости Конец -->
+						</div><!--bottom-left Конец-->
+						<div id="bottom-right"><!--Колонка внизу справа -->
+							<h2>Самые читаемые новости</h2>
+								<!--Заголовки новостей внизу справа. Начало.-->
+								<div id="bottom-news">
+									<div class="bottom-news-item"><!--bottom-news-item 1 -->
+										<article>
+										<h3><a href="#">В Турции пообещали найти альтернативу из-за отказа США поставить F-35</a></h3>
+										<!--Легенда новости-->
+											<div class="lnews-legend">
+												<!--Ссылка на раздел-->
+												<div class="legend-link">
+													<a href="#">/ Политика</a>
+												</div>
+												<div class="legend-time">
+													<time>10:48</time>
+												</div>
+												<div class="legend-commcount">
+													15
+												</div>
+											</div>
+											<p></p>
+										<!--Легенда новости. Конец.-->
+										</article>
+									</div><!--bottom-news-item 1 Конец-->	
+									<div class="bottom-news-item"><!--bottom-news-item 2 -->
+										<article>
+										<h3><a href="#">Назван минимальный доход для причисления к среднему классу‍</a></h3>
+											<!--Легенда новости-->
+											<div class="lnews-legend">
+												<!--Ссылка на раздел-->
+												<div class="legend-link">
+													<a href="#">/ Политика</a>
+												</div>
+												<div class="legend-time">
+													<time>10:48</time>
+												</div>
+												<div class="legend-commcount">
+													15
+												</div>
+											</div>
+											<p></p>
+											<!--Легенда новости. Конец.-->		
+									<!--Заголовок новости 2. Конец.-->
+										</article>
+									</div><!--bottom-news-item 2 Конец-->
+									<div class="bottom-news-item"><!--bottom-news-item 3 -->
+										<article>
+										<h3><a href="#">Назван минимальный доход для причисления к среднему классу‍</a></h3>
+											<!--Легенда новости-->
+											<div class="lnews-legend">
+												<!--Ссылка на раздел-->
+												<div class="legend-link">
+													<a href="#">/ Политика</a>
+												</div>
+												<div class="legend-time">
+													<time>10:48</time>
+												</div>
+												<div class="legend-commcount">
+													15
+												</div>
+											</div>
+											<!--Легенда новости. Конец.-->	
+										</article>						
+									</div><!--bottom-news-item 3 Конец-->
+									<!--Заголовок новости 3. Конец.-->	
+								</div><!--bootom-news Конец-->
+								<!--Заголовки новостей внизу справа. Конец.-->
+						</div><!--bottom-right Конец-->
+				</div><!--block-bottom Конец -->		
+			</section>
+		</div><!--fixed container Конец.-->			
+	</div> <!--block-centr Конец-->
+	
+ <!--                 Центральная часть Нижняя колонка Конец      -->
+ 			
+
+ <!--                Самая нижняя часть. Подвал. Footer.         -->
+
+	<div id="block-footer">
+		<div class="fixed-container"><!--Не совсем подходит. Переопределим в CSS. зададим padding-->
+			<nav>
+			<div id="footer-menu-left">
+				<div class="footer-menu-item"><a href="#">Главная</a></div>
+				<div class="footer-menu-item"><a href="#">Путешествия</a></div>
+				<div class="footer-menu-item"><a href="#">Политика</a></div>
+				<div class="footer-menu-item"><a href="#">Спорт</a></div>
+				<div class="footer-menu-item"><a href="#">Общество</a></div>
+				<div class="footer-menu-item"><a href="#">Наука</a></div>
+				<div class="footer-menu-item"><a href="#">Экономика</a></div>
+				<div class="footer-menu-item"><a href="#">Туризм</a></div>
+				<div class="footer-menu-item"><a href="#">В мире</a></div>
+			</div><!--footer-menu-left Конец-->
+			</nav>
+			<!--Меню справа внизу Конец-->	
+			<!--Логотип и список-->	
+		<address>	
+			<div id="footer-about">
+				<div class="block-logo-img">Новостное агентство</div>
+				<p>
+				<div class="footer-about-item"><a href="#">Об агенстве</a></div>
+				<div class="footer-about-item"><a href="#">Контакты</a></div>
+				<div class="footer-about-item"><a href="#">Опубликовать новость</a></div>
+			</div><!--footer-about Конец-->
+			<!--Логотип и список Конец-->
+			<!--Линия с социальными сетями и контактами-->
+			<div id="footer-right">
+				<!--Линия с социальными сетями-->
+				<div id="footer-social-line">
+					<a href="https://vk.com"><img src="img/vk.png" alt="vk image"></a>
+					<a href="https://www.facebook.com"><img src="img/fb.png" alt="fb image"></a>
+					<a href="https://twitter.com"><img src="img/tw.png" alt="tw image"></a>
+					<a href="https://www.instagram.com"><img src="img/instagram.png" alt="inst image"></a>
+				</div><!--footer-social-line Конец-->
+				<!--Линия с социальными сетями Конец-->
+				<!--Линия с контактами-->	
+				<div id="footer-contacts">
+					<div id="footer-tel">
+						<a href="tel:+74999955555">+7 (499) 995-55-55</a>
+					</div><!--footer-tel Конец-->
+					<div id="footer-email">
+						<a href="mailto:info@agency.ru">info@agency.ru</a>
+					</div><!--footer-email Конец-->
+				</div><!--footer-contacts Конец-->
+				<!--Линия с контактами Конец-->		
+			</div><!--footer-right Конец-->		
+			<!--Линия с социальными сетями и контактами Конец-->
+		</address>
+		</div><!--block-footer - fixed-container-->	
+		<address>	
+			<div id="bottom-line">
+			<small>&copy; Новостное агентство, 2017-2018 все права защищены</small>
+		</div><!--bottom-line Конец-->
+		</address>	
+	</div><!--block-footer Конец -->
+		<!--Строка снизу конец-->	
+<!--                 Самая нижняя часть. Подвал. Footer. Конец -->
+</body>
+</html>
