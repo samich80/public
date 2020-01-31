@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Новостное агенство</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scripts.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div id="h-top-line">
+        <div class="container">
+          <div id="h-top-head">
+            Самые <a href="#">свежие новости</a> в реальном времени
+          </div>
+          <div id="h-top-time">
+           <time datetime="01-29-2020T12:49">12:30 29.01.2020</time>
+          </div>
+        </div>
+      </div><!--  h-top-line Конец -->
+      <div id="h-top-info">
+        <div class="container container-header">
+          <div id="h-logo">
+            <img src="img/logo.png" id="h-logo-1000">
+            <img src="img/logo-600.png" id="h-logo-600">
+          </div>
+          <div id="h-city-1000">
+            <label class="select-wrapper">
+              Выбор города
+            <select class="select">
+              <option value="msc">Москва</option>
+            </select>
+            </label>
+          </div>
+          <div id="date">
+            <time id="long-date" datetime="2020-01-29">29 января, среда</time>
+            <time id="short-date" datetime="2020-01-29">29 января, Ср</time>
+          </div>
+          <div id="time">
+            <time datetime="12:49">12:49</time>
+          </div>
+          <div id="weather">
+            +5 °C
+          </div>
+          <div id="search">
+            <div id="search-1000">
+              <form class="header-search" action="#" method="get">
+               <input class="search" id="search" name="search" type="text">
+                <label for="search" class="search-label">Поиск по сайту</label>
+               <button class="search-submit" type="submit" aria-label="Найти"></button>
+             </form>
+            </div>
+            <div id="search-600">
+              <button class="search-submit-600" type="submit" aria-label="Найти"></button>
+            </div>
+          </div>
+         <!--  mobile menu -->
+          <!-- <div class=".line-break"></div> -->
+          <div id="menu-mobile">
+            <nav>
+            <div class="menu">
+              <a class="menu-triger" href="#"></a>
+                <div class="menu-popup">
+                  <a class="menu-close" href="#"></a>
+                    <ul>
+                      <li><a href="#">О компании</a></li>
+                      <li><a href="#">Услуги</a></li>
+                      <li><a href="#">Прайс-лист</a></li>
+                      <li><a href="#">Услуги</a></li>
+                      <li><a href="#">Гарантии</a></li>
+                      <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            </nav>
+          </div>
+          <!-- main menu -->
+
+          </div>
+        </div> <!-- container container-header КОНЕЦ -->
+        <div class="container big-menu">
+        <nav id="nav-wrapper">
+          <div class="menu-wrapper">
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a href="#">Главная</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Политика</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Общество</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Экономика</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">В мире</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Проишествия</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Спорт</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Наука</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Туризм</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      </div> <!-- h-top-info КОНЕЦ -->
+    </header>
+  </body>
+</html>
