@@ -36,7 +36,6 @@ $('.img-parallax').each(function(){
       transform: 'translate(-50%, -' + imgPercent + '%)'
     });
   }
-  
   $(document).on({
     scroll: function () {
       parallaxImg();
@@ -48,11 +47,11 @@ $('.img-parallax').each(function(){
 
 var modal01 = document.getElementById('modal01');
 var modal_01 = document.getElementById("modal_01");
-var fact01_off = $('#fact01').;
+var fact01_off = $('#fact01').width();
 var audio01 = document.getElementById("audio01");
 
 
-var modal_01_x = fact01_off;
+var modal_01_x = fact01_off - 200;
 var modal_01_y = modal_01.offsetTop-100;
 
 
